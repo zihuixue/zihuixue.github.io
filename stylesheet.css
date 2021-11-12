@@ -86,13 +86,13 @@ th,
 tr,
 p,
 a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Helvetica', Verdana, Helvetica, sans-serif;
   font-size: 17px;
-font-weight: 900
+font-weight: 300
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Helvetica', Verdana, Helvetica, sans-serif;
   font-size: 17px;
 font-weight: bold;
 }
