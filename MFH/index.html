@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="The Modality Focusing Hypothesis: Towards Understanding Crossmodal Knowledge Distillation">
+  <meta name="keywords" content="multimodal learning, knowledge distillation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>"The Modality Focusing Hypothesis: Towards Understanding Crossmodal Knowledge Distillation</title>
+
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://zihuixue.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://tsinghua-mars-lab.github.io/MKE/">
+            Multimodal Knowledge Expansion
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">The Modality Focusing Hypothesis: Towards Understanding Crossmodal Knowledge Distillation</h2>
+          <h2 class="is-size-5 publication-authors"> ICLR 2023, top-5% (oral)</h2><br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zihuixue.github.io">Zihui Xue</a><sup>*,1</sup>,</span>
+            <span class="author-block">
+              <a href="https://zhengqigao.github.io">Zhengqi Gao</a><sup>*,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://oliverrensu.github.io">Sucheng Ren</a><sup>*3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://hangzhaomit.github.io">Hang Zhao</a><sup>4</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-8 publication-authors">
+            <span class="author-block"><sup>1</sup>UT Austin</span>&nbsp;
+            <span class="author-block"><sup>2</sup>MIT</span>&nbsp;
+            <span class="author-block"><sup>3</sup>South China University of Technology</span>&nbsp;
+            <span class="author-block"><sup>4</sup>Tsinghua University, Shanghai Qi Zhi Institute</span>
+            <span class="author-block"><sup>*</sup>Equal contribution, work done during internship at Shanghai Qi Zhi Institute</span>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openreview.net/forum?id=w0QXrZ3N-s"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2206.06487"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="tobefilled"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop height="100%">
+        <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/teaser.mp4"
+                type="video/mp4">
+      </video> -->
+      <h2 class="subtitle has-text-centered">
+        Is crossmodal knowledge distillation always helpful? If not, what is the decisive factor here?
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Crossmodal knowledge distillation (KD) extends traditional knowledge distillation to the area of multimodal learning and demonstrates great success in various applications.
+            To achieve knowledge transfer across modalities, a pretrained network from one modality is adopted as the teacher to provide supervision signals to a student network learning from another modality.
+            In contrast to the empirical success reported in prior works, the working mechanism of crossmodal KD remains a mystery.
+          </p>
+          <p>
+            In this paper, we present a thorough understanding of crossmodal KD. We begin with two case studies and demonstrate that KD is not a universal cure in crossmodal knowledge transfer.
+            We then present <b>the modality Venn diagram</b> to understand modality relationships and <b>the modality focusing hypothesis</b> revealing the decisive factor in the efficacy of crossmodal KD.
+            Experimental results on 6 multimodal datasets help justify our hypothesis, diagnose failure cases, and point directions to improve crossmodal knowledge transfer in the future.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <!-- <h2 class="title is-3">Animation</h2> -->
+
+        <h3 class="title is-4">Motivation: crossmodal KD is not always helpful</h3>
+        <div class="content has-text-justified">
+          <img src="./images/table1.png" alt="table1" style="width: 75%;">
+          <p>
+            Even with the great increase in teacher accuracy, crossmodal KD fails to outperform unimodal KD in some cases. A more accurate teacher does not lead to a better student.
+          </p>
+        </div>
+
+        <h3 class="title is-4">The Modality Venn Diagram (MVD)</h3>
+        <div class="content has-text-justified">
+          <p>
+            Following a causal perspective (i.e., features cause labels), we assume that the label y is determined by a
+            subset of features; this subset of features are referred to as <b>decisive features</b>.
+          </p>
+          <p>
+            Stemming from the common perception that multimodal data possess shared information and preserve information specific to each modality,
+            MVD states that any multimodal features are composed of <b>modality-general features</b> and <b>modality-specific features</b>.
+          </p>
+          <p>
+            Decisive features of the two modalities are thus composed of two parts: <b>(1) modality-general decisive features</b> and <b>(2) modality-specific decisive features</b>; these two parts of decisive features work together and contribute to the final label y.
+          </p>
+          <img src="./images/figure1.png" alt="table1" style="width: 75%;">
+        </div>
+
+        <h3 class="title is-4">The Modality Focusing Hypothesis (MFH)</h3>
+        <div class="content has-text-justified">
+          <p>
+            For crossmodal KD, distillation performance is dependent on the proportion of modality-general decisive features preserved in the teacher network: with
+            larger γ, the student network is expected to perform better.
+          </p>
+          <img src="./images/figure2.png" alt="table1" style="width: 75%;">
+          <img src="./images/figure3.png" alt="table1" style="width: 75%;">
+        </div>
+      </div>
+    </div>
+
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{xue2022modality,
+      title={The Modality Focusing Hypothesis: Towards Understanding Crossmodal Knowledge Distillation},
+      author={Xue, Zihui and Gao, Zhengqi and Ren, Sucheng and Zhao, Hang},
+      journal={arXiv preprint arXiv:2206.06487},
+      year={2022}
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://openreview.net/forum?id=w0QXrZ3N-s">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="tobefilled" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
